@@ -44,11 +44,11 @@ const Tabs = () => {
   };
   return (
     <div className="w-full">
-      <div className="flex justify-center lg:justify-start h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
+      <div className="flex justify-evenly lg:justify-start h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
         {tabOptions?.map((option: ITabOption) => {
           return (
             <div
-              className="flex gap-2  text-2xl items-center justify-center cursor-pointer"
+              className="flex gap-2 text-2xl items-center justify-center cursor-pointer"
               onClick={() => tabHandler(option?.id)}
             >
               <Image src={option?.icon} alt="icon" width={25} height={25} />

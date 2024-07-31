@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import blogImage from "@/assets/demo.jpg";
 import "./index.css";
+import likeIcon from "@/assets/love.svg";
+import saveIcon from "@/assets/saved_icon.svg";
 
 interface IBlogCard {
   image?: string;
@@ -20,15 +22,15 @@ const BlogCard: React.FC<IBlogCard> = ({ image, title, description }) => {
           </span>
         </div>
         <div className="flex gap-10">
-          <span>Like</span>
-          <span>save</span>
+          <Image src={likeIcon} alt="like" />
+          <Image className = "w-5"src={saveIcon} alt="save" />
         </div>
       </div>
-      <div className="w-[130px] lg:w-[25%] lg:h-full flex items-center justify-center">
+      <div className="w-[130px] lg:w-[21%] lg:h-full flex items-center justify-center">
         <Image
           src={image || blogImage}
           alt="blog_image"
-          className="w-full h-[100px] lg:w-full lg:h-[70%]"
+          className="w-full h-[80px] lg:w-full lg:h-[70%]"
           style={{
             borderRadius: "8px",
           }}
