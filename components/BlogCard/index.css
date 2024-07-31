@@ -1,0 +1,14 @@
+.multi-line-clamp {
+    position: relative;
+    max-height: 3em; /* Adjust based on your line-height */
+    overflow: hidden;
+  }
+  
+  .multi-line-clamp:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white; /* Adjust based on background color */
+    padding: 0 0.5em; /* Adjust based on your design */
+  }
+  

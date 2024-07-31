@@ -26,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full h-[100px] shadow-[0_2px_8px_0_#00000014] flex justify-between items-center px-10 bg-white">
+    <div className="w-full h-[100px] shadow-[0_2px_8px_0_#00000014] flex justify-between items-center lg:px-10 bg-white">
       <div>LOGO</div>
       <div className="relative">
         <div

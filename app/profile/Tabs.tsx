@@ -3,7 +3,15 @@ import Newsletters from "@/components/Newsletters";
 import SavedNewsLetters from "@/components/Saved";
 import { taboptions } from "@/constants/tabs-constants";
 import { useState } from "react";
+import newletterIcon from "@/assets/newsletter.svg";
+import savedIcon from "@/assets/saved_icon.svg";
+import Image from "next/image";
 
+interface ITabOption {
+  id: number;
+  title: string;
+  icon: string;
+}
 const Tabs = () => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
@@ -11,13 +19,15 @@ const Tabs = () => {
     {
       id: 0,
       title: taboptions.NEWSLETTER,
+      icon: newletterIcon,
     },
     {
       id: 1,
       title: taboptions.SAVED,
+      icon: savedIcon,
     },
   ];
-  
+
   const renderView = () => {
     switch (selectedTab) {
       case 0:
@@ -34,13 +44,14 @@ const Tabs = () => {
   };
   return (
     <div className="w-full">
-      <div className="flex  h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
-        {tabOptions?.map((option) => {
+      <div className="flex justify-center lg:justify-start h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
+        {tabOptions?.map((option: ITabOption) => {
           return (
             <div
-              className="cursor-pointer"
+              className="flex gap-2  text-2xl items-center justify-center cursor-pointer"
               onClick={() => tabHandler(option?.id)}
             >
+              <Image src={option?.icon} alt="icon" width={25} height={25} />
               {option?.title}
             </div>
           );

@@ -23,7 +23,7 @@ const SavedNewsLetters = () => {
   ];
   return (
     <div className="w-full h-full pt-6">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 items-center lg:items-start">
         {newsletters?.map((blog: IBlogCard) => {
           return (
             <BlogCard
