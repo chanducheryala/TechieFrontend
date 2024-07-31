@@ -4,10 +4,14 @@ import MobileTab from "@/components/MobileTab";
 
 const Profile = () => {
   return (
-    <div className="w-full h-[80vh] flex flex-col gap-20 lg:flex-row">
-      <UserProfile />
-      <Tabs />
-      {/* <MobileTab /> */}
+    <div>
+      <div className="hidden w-full h-[80vh] lg:flex flex-col gap-20 lg:flex-row">
+        <UserProfile />
+        <Tabs />
+      </div>
+      <div>
+        <MobileTab />
+      </div>
     </div>
   );
 };
