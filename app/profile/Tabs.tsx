@@ -43,8 +43,8 @@ const Tabs = () => {
     setSelectedTab(tabId);
   };
   return (
-    <div className="hidden lg:block w-full">
-      <div className="lg:flex justify-evenly lg:justify-start h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
+    <div className="w-full">
+      <div className="flex justify-evenly lg:justify-start h-max mt-10 text-xl gap-10 border-b-2 border-gray-200 py-4">
         {tabOptions?.map((option: ITabOption) => {
           return (
             <div

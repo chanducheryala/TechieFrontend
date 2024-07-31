@@ -7,7 +7,7 @@ const Profile = () => {
     <div className="w-full h-[80vh] flex flex-col gap-20 lg:flex-row">
       <UserProfile />
       <Tabs />
-      <MobileTab />
+      {/* <MobileTab /> */}
     </div>
   );
 };
